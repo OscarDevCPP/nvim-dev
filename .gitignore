@@ -1,0 +1,49 @@
+# Ignorar archivos generados por Neovim
+*.swp
+*.swo
+*.swn
+*.un~
+*.un
+
+# Ignorar archivos de respaldo
+*~
+
+# Ignorar el directorio de respaldo de Neovim
+.undo/
+
+# Ignorar el directorio de swap de Neovim
+.swp/
+
+# Ignorar los directorios y archivos de undo de Neovim
+.undodir/
+*.nvimundo
+*.nvimforter
+
+# Ignorar los archivos de sesión de Neovim
+Session.vim
+
+# Ignorar los archivos de historial de comandos
+.commandline_hist
+.history
+
+# Ignorar los archivos de intercambio de Neovim
+*.viminfo
+
+# Ignorar el archivo de configuración local de Neovim
+init.vim
+
+# Ignorar la carpeta de respaldo de plugins
+ plugged/
+
+# Ignorar la carpeta de estado de coc.nvim
+ coc.nvim/
+
+# Ignorar la carpeta de estado de dein.vim
+ dein/
+
+# Ignorar archivos de registro de Neovim
+*.log
+
+
+
+copy-init.vim
