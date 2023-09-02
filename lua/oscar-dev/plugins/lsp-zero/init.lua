@@ -85,7 +85,7 @@ return {
       lsp.nvim_lua_ls({
         single_file_support = false,
         on_attach = function(client, bufnr)
-          print('lua_ls initiliazed')
+          require("notify")("lua_ls initiliazed")
         end,
       })
     )
