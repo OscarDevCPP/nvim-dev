@@ -1,4 +1,4 @@
--- Cargando modulo de configuraciónes generales para nvim 
+-- Cargando modulo de configuraciónes generales para nvim
 require('oscar-dev.settings')
 require('oscar-dev.mappings')
 
@@ -17,5 +17,4 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("oscar-dev.plugins")
-
 
