@@ -17,5 +17,6 @@
   "nvim-treesitter-refactor": { "branch": "master", "commit": "65ad2eca822dfaec2a3603119ec3cc8826a7859e" },
   "nvim-ts-autotag": { "branch": "main", "commit": "6be1192965df35f94b8ea6d323354f7dc7a557e4" },
   "nvim-web-devicons": { "branch": "master", "commit": "cfc8824cc1db316a276b36517f093baccb8e799a" },
+  "onedarkpro.nvim": { "branch": "main", "commit": "fa861b992471d55f653751f1fea8769ca536a554" },
   "vim-sneak": { "branch": "master", "commit": "29ec9167d4a609f74c130b46265aa17eb2736e6a" }
 }
