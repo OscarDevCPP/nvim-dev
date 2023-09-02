@@ -36,6 +36,14 @@ return {
     local cmp_action = require('lsp-zero').cmp_action()
 
     cmp.setup({
+      formatting = {
+        fields = { 'abbr', 'menu', 'kind' },
+        format = require('lspkind').cmp_format({
+          mode = 'symbol',       -- show only symbol annotations
+          maxwidth = 50,         -- prevent the popup from showing more than provided characters
+          ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
+        })
+      },
       preselect = 'item',
       completion = {
         completeopt = 'menu,menuone,noinsert'
