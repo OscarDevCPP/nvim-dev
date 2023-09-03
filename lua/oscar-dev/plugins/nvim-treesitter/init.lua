@@ -1,12 +1,19 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
+  dependencies = {
+    'JoosepAlviste/nvim-ts-context-commentstring',
+  },
   config = function()
     local configs = require("nvim-treesitter.configs")
 
     configs.setup({
       --asegurar instalación
-      ensure_installed = { "lua", "vim", "vimdoc", "query", "css", "javascript", "html", "java", "python", "typescript" },
+      ensure_installed = { "lua", "vim", "vimdoc", "query", "css", "javascript", "html", "java", "python", "typescript",
+        "tsx" },
+      context_commentstring = {
+        enable = true,
+      },
       sync_install = false,
 
       highlight = { enable = true },
@@ -65,7 +72,7 @@ return {
       },
 
       textobjects = {
-        select      = {
+        select = {
           enable = true,
           lookahead = true,
           keymaps = {
@@ -78,7 +85,7 @@ return {
           }
         },
 
-        swap        = {
+        swap   = {
           enable = true,
           swap_next = {
             ["<leader>a"] = "@function.outer",
@@ -88,7 +95,7 @@ return {
           },
         },
 
-        move        = {
+        move   = {
           enable = true,
           set_jumps = true,
           goto_next_start = {
