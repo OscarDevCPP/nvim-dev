@@ -51,13 +51,13 @@ return {
         end
 
         -- Navigation
-        map('n', 'hn', function()
+        map('n', '<leader>hn', function()
           if vim.wo.diff then return ']c' end
           vim.schedule(function() gs.next_hunk() end)
           return '<Ignore>'
         end, { expr = true })
 
-        map('n', 'hp', function()
+        map('n', '<leader>hp', function()
           if vim.wo.diff then return '[c' end
           vim.schedule(function() gs.prev_hunk() end)
           return '<Ignore>'

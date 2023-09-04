@@ -23,6 +23,7 @@ return {
     telescope.load_extension('fzf')
     telescope.load_extension('notify')
     telescope.load_extension('projects')
+    telescope.load_extension('dap')
 
     local builtin = require('telescope.builtin')
     vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
@@ -35,5 +36,6 @@ return {
     vim.keymap.set('n', '<leader>ft', builtin.builtin, {})
     vim.keymap.set('n', '<leader>fn', '<Cmd>Telescope notify<cr>')
     vim.keymap.set('n', '<leader>fp', '<Cmd>Telescope projects<cr>')
+    vim.keymap.set('n', '<leader>fd', '<Cmd>Telescope dap commands<cr>')
   end
 }

@@ -15,5 +15,24 @@ return {
     dap.listeners.before.event_exited["dapui_config"] = function()
       dapui.close()
     end
+
+    vim.keymap.set('n', '<leader>dt', dapui.toggle, {})
+    vim.keymap.set('n', '<leader>de', dapui.eval, {})
+    vim.keymap.set('n', '<leader>ds', function ()
+      dapui.float_element('scopes', {
+        enter = true
+      })
+    end, {})
+    vim.keymap.set('n', '<leader>dw', function ()
+      dapui.float_element('watches', {
+        enter = true
+      })
+    end, {})
+    vim.keymap.set('n', '<leader>dw', function ()
+      dapui.float_element('watches', {
+        enter = true
+      })
+    end, {})
+
   end
 }
