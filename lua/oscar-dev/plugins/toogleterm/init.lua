@@ -14,7 +14,7 @@ return {
       open_mapping = "<C-t>",
       insert_mappings = true,
       terminal_mappings = true,
-      direction = 'vertical',
+      direction = 'float',
       float_opts = {
         border = 'curved'
       },
