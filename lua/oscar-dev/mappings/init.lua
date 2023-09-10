@@ -10,25 +10,17 @@ local function imap(after, before)
   map("i", after, before, opts)
 end
 
-local function tmap(after, before)
-  map("t", after, before, opts)
-end
-
 vim.g.mapleader = " "
-
 
 -- Asignaciones para nvim-tree
 nmap("<leader>ne", ":NvimTreeToggle<CR>")
-
-
+nmap("<leader>q", ":q<CR>")
 
 -- Asignaciones para perfil de usuario
 imap("jj", "<Esc>")
 imap("jl", "<right>")
 imap("jh", "<left>")
 
-nmap("<leader>w", ":w<CR>")
-nmap("<leader>q", ":q<CR>")
 nmap("<C-j>", "<C-w>j")
 nmap("<C-k>", "<C-w>k")
 nmap("<C-h>", "<C-w>h")
