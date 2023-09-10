@@ -45,5 +45,5 @@ init.vim
 *.log
 
 
-
+.spectacle
 copy-init.vim
