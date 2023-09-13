@@ -2,7 +2,8 @@
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 
 local workspace_dir = '/home/oscar-dev/Documentos/java_projects/' .. project_name
-local home_jtdls = "/home/oscar-dev/jdtls"
+local home_config_java = "/home/oscar-dev/config-java-nvim";
+local home_jtdls = home_config_java .. "/jdtls"
 --                                               ^^
 --                                               string concattenation in Lua
 -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
@@ -68,6 +69,13 @@ local config = {
     bundles = {}
   },
 }
+
+config['init_options'] = {
+  bundles = {
+    vim.fn.glob(home_config_java .. "/com.microsoft.java.debug.plugin-0.49.0.jar", 1)
+  },
+}
+
 -- This starts a new client & server,
 -- or attaches to an existing client & server depending on the `root_dir`.
 require('jdtls').start_or_attach(config)

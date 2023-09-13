@@ -11,5 +11,13 @@ return {
     -- If using nvim-dap
     vim.api.nvim_set_keymap('n', '<leader>df', '<Cmd>lua require"jdtls".test_class()<CR>', { noremap = true })
     vim.api.nvim_set_keymap('n', '<leader>dn', '<Cmd>lua require"jdtls".test_nearest_method()<CR>', { noremap = true })
+
+    local jdtls = require('jdtls')
+
+    require 'lspconfig'.jdtls.setup {
+      on_attach = function(client, bufnr)
+        require('jdtls.dap').setup_dap_main_class_configs()
+      end
+    }
   end
 }
