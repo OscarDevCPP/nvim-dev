@@ -28,11 +28,6 @@ return {
         enter = true
       })
     end, {})
-    vim.keymap.set('n', '<leader>dw', function ()
-      dapui.float_element('watches', {
-        enter = true
-      })
-    end, {})
 
   end
 }
