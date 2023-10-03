@@ -75,11 +75,18 @@ return {
     end)
 
     lsp.set_sign_icons({
-      error = '✘',
-      warn = '▲',
-      hint = '⚑',
-      info = '»'
+      error = 'ﲅ',
+      warn = '',
+      hint = '👓',
+      info = ''
     })
+
+    -- lsp.set_sign_icons({
+    --   error = 'ﲅ✘',
+    --   warn = '▲',
+    --   hint = '⚑',
+    --   info = '»'
+    -- })
 
     require('lspconfig').lua_ls.setup(
       lsp.nvim_lua_ls({
@@ -89,6 +96,9 @@ return {
         end,
       })
     )
+
+
+    require('lspconfig').pyright.setup({})
 
     --Llamar a este comando al ultimo siempre
     lsp.setup()

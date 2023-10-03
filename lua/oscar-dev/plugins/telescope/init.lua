@@ -40,7 +40,7 @@ return {
         }
       }
     }
-
+    vim.api.nvim_set_hl(0, "TelescopeBorder", {fg="#00fff7"})
     telescope.load_extension('fzf')
     telescope.load_extension('notify')
     telescope.load_extension('projects')

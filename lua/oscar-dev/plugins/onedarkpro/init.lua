@@ -8,9 +8,8 @@ return {
           dark_orange = "require('onedarkpro.helpers').darken('orange', 40,'onedark')",
         },
         highlights = {
-          --Visual = { fg = "#FF0000", bg = "#FFFF00", italic = true }
           Visual = { bg = "${dark_orange}", italic = true },
-          LineNr = { fg = "red" }
+          LineNr = { fg = "red" },
         },
         styles = {
           types = "NONE",
