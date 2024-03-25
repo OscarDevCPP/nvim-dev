@@ -15,6 +15,7 @@ vim.g.mapleader = " "
 -- Asignaciones para nvim-tree
 nmap("<leader>ne", ":NvimTreeToggle<CR>")
 nmap("<leader>q", ":q<CR>")
+nmap("<leader>w", ":w<CR>")
 
 -- Asignaciones para perfil de usuario
 imap("jj", "<Esc>")
