@@ -11,9 +11,6 @@ return {
       --asegurar instalación
       ensure_installed = { "lua", "vim", "vimdoc", "query", "css", "javascript", "html", "java", "python", "typescript",
         "tsx" },
-      context_commentstring = {
-        enable = true,
-      },
       sync_install = false,
 
       highlight = { enable = true },
@@ -109,5 +106,11 @@ return {
       },
 
     })
+    require('ts_context_commentstring').setup {
+      enable_autocmd = false,
+      languages = {
+        typescript = '// %s',
+      },
+    }
   end
 }
