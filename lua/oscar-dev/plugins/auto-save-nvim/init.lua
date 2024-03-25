@@ -18,6 +18,6 @@ return {
     end
   },
   keys = {
-    { "<leader>n", ":ASToggle<CR>", desc = "Toggle auto-save" },
+    { "<leader>i", ":ASToggle<CR>", desc = "Toggle auto-save" },
   },
 }

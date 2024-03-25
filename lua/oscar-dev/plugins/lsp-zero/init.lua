@@ -96,11 +96,28 @@ return {
         end,
       })
     )
-
-
     require('lspconfig').pyright.setup({})
-
-    --Llamar a este comando al ultimo siempre
+    require 'lspconfig'.intelephense.setup {}
+    require('lspconfig').tailwindcss.setup({
+      filetypes = {
+          "aspnetcorerazor", "astro", "astro-markdown", "blade", "clojure", "django-html", "htmldjango",
+          "edge", "eelixir", "elixir", "ejs", "erb", "eruby", "gohtml", "gohtmltmpl", "haml", "handlebars",
+          "hbs", "html", "html-eex", "heex", "jade", "leaf", "liquid", "markdown", "mdx", "mustache", "njk",
+          "nunjucks", "php", "razor", "slim", "twig", "css", "less", "postcss", "sass", "scss", "stylus", "sugarss",
+          "javascriptreact", "reason", "rescript", "typescriptreact", "vue", "svelte", "templ"
+      }
+    })
+    require('lspconfig').tsserver.setup({
+      on_attach = function(client, bufnr)
+        require('nvim-lsp-ts-utils').setup({
+          filter_out_diagnostics_by_code = { 80001 },
+        })
+        require('nvim-lsp-ts-utils').setup_client(client)
+      end,
+      on_detach = function(client, bufnr)
+        require('lspconfig').tsserver.manager.try_and_wrapper()
+      end
+    })
     lsp.setup()
   end,
 
