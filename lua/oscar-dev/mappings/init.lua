@@ -18,9 +18,9 @@ nmap("<leader>q", ":q<CR>")
 nmap("<leader>w", ":w<CR>")
 
 -- Asignaciones para perfil de usuario
-imap("jj", "<Esc>")
-imap("jl", "<right>")
-imap("jh", "<left>")
+-- imap("jj", "<Esc>")
+-- imap("jl", "<right>")
+-- imap("jh", "<left>")
 
 nmap("<C-j>", "<C-w>j")
 nmap("<C-k>", "<C-w>k")

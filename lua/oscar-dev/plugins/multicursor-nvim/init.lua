@@ -9,14 +9,31 @@ return {
   keys = {
     {
       mode = { 'v', 'n' },
-      '<Leader>m',
+      '<leader>c',
       '<cmd>MCstart<cr>',
+      desc = 'Create a selection for selected text or word under the cursor',
+    },
+    {
+      mode = { 'v', 'n' },
+      '<leader>u',
+      '<cmd>MCunderCursor<cr>',
       desc = 'Create a selection for selected text or word under the cursor',
     },
   },
   config = function()
     require('multicursors').setup {
-      hint_config = false,
+      hint_config = {
+        border = 'rounded',
+        position = 'bottom-right',
+      },
+      generate_hints = {
+        normal = true,
+        insert = true,
+        extend = true,
+        config = {
+          column_count = 2,
+        },
+      },
     }
 
     local function is_active()
